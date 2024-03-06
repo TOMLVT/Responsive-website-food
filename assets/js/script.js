@@ -60,13 +60,9 @@ for (let i = 0; i < searchBoxElems.length; i++) {
     document.body.classList.toggle("active");
   });
 }
-
-
-
 /**
  * move cycle on scroll
  */
-
 const deliveryBoy = document.querySelector("[data-delivery-boy]");
 
 let deliveryBoyMove = -80;
@@ -89,4 +85,19 @@ window.addEventListener("scroll", function () {
     deliveryBoy.style.transform = `translateX(${deliveryBoyMove}px)`;
   }
 
+});
+
+//vo hieu hoa code
+document.addEventListener("keydown", function (event){
+  if (event.ctrlKey){
+     event.preventDefault();
+  }
+  if(event.keyCode == 123){
+     event.preventDefault();
+  }
+});
+
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault(); // Chặn hành động mặc định khi chuột phải được nhấp
+  alert('Xin lỗi, chức năng này đã bị chặn!');
 });
